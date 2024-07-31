@@ -13,7 +13,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 # Show title and description.
 st.title("📄 Yee haw Document question answering")
-'''st.write(
+"""st.write(
     "Upload a document below and ask a question about it – GPT will answer! "
     #"To use this app, you need to provide an OpenAI API key, which you can get [here](https://platform.openai.com/account/api-keys). "
 )
@@ -61,4 +61,4 @@ else:
 
         # Stream the response to the app using `st.write_stream`.
         st.write_stream(stream)
-'''
+"""
