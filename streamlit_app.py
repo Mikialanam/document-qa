@@ -12,7 +12,7 @@ st.set_page_config(page_title="Dashboard 2",
     })
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
+    	    MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
             .styles_stateContainer__CelYF.parent {visibility: hidden;}
