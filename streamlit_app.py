@@ -1,7 +1,11 @@
 import streamlit as st
 from openai import OpenAI
 
-st.set_page_config(page_title="Dashboard 1", page_icon=None, layout="Wide", initial_sidebar_state="Collapsed", menu_items=None)
+st.set_page_config(page_title="Dashboard 1", 
+                   page_icon=None, 
+                   layout="wide", 
+                   initial_sidebar_state="collapsed", 
+                   menu_items=None)
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
