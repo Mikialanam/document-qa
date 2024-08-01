@@ -69,7 +69,7 @@ authenticator = stauth.Authenticate(
     hashed_passwords,
     title,
     "asdfsfd",
-    cookie_expiry_days=0
+    cookie_expiry_days= "30"
 )
 
 name, authentication_status, username = authenticator.login("Login" , "main")
