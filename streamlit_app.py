@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
-st.set_page_config(page_title="Dashboard 3", 
+st.set_page_config(page_title="Dashboard1", 
                    page_icon=None, 
                    layout="wide", 
                    initial_sidebar_state="collapsed", 
@@ -19,6 +19,7 @@ hide_st_style = """
             .styles_stateContainer__CelYF {visibility: hidden;}
             .viewerBadge_text__fzr3E {visibility: hidden;}
             .viewerBadge_link__qRIco {visibility: hidden;}
+            .viewerBadge_link__qRIco.parent {visibility: hidden;}
             .viewerBadge_container__r5tak.styles_viewerBadge__CvC9N {visibility: hidden;}
             
             .block-container
