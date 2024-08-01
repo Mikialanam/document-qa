@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
-st.set_page_config(page_title="Dashboard 2", 
+st.set_page_config(page_title="Dashboard 3", 
                    page_icon=None, 
                    layout="wide", 
                    initial_sidebar_state="collapsed", 
