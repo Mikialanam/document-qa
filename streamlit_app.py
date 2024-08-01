@@ -18,6 +18,11 @@ hide_st_style = """
                     padding-bottom: 0rem;
                     margin-top: 0rem;
                 }
+
+            #root > div:nth-child(1) > div.withScreencast > div > div > div > section:nth-child(2)
+            {
+                    height: 3rem !important;
+                }
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
