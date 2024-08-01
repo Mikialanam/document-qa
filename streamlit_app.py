@@ -1,6 +1,11 @@
 import streamlit as st
 from openai import OpenAI
 
+import pickle
+from pathlib import Path
+import streamlit_authenticator as stauth
+
+
 st.set_page_config(page_title="Dashboard1", 
                    page_icon=None, 
                    layout="wide", 
@@ -10,6 +15,8 @@ st.set_page_config(page_title="Dashboard1",
         'Report a bug': "https://www.extremelycoolapp.com/bug",
         'About': "# This is a header. This is an *extremely* cool app!"
     })
+
+# Hide streamlit elements
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
@@ -43,11 +50,40 @@ hide_st_style = """
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+title = "📄 Yee haw Update 5"
 # Show title and description.
-st.title("📄 Yee haw Update 5")
+st.title(title)
 
-st.components.v1.iframe(
-    "https://app.powerbi.com/view?r=eyJrIjoiNjM3ODcwOTAtOWU0Yy00NjI3LWEzZDctNjcxYzE4ZDY2NjU3IiwidCI6ImQxNTY2ZDQ0LTEyYjYtNDAyNy1iZDA0LWQyOTJmZWE3OWM5ZSJ9", 
+#User Authentication
+names = ["Miki Alanam", "John Doe"]
+usernames = ["malanam", "jdoe"]
+
+#Load hashed passwords
+file_path = Path(__file__).parent / "hashed_pw.pkl"
+with file_path.open("rb") as file:
+    hashed_passwords = pickle.load(file)
+
+authenticator = stauth.Authenticate(
+    names,
+    usernames,
+    hashed_passwords,
+    title,
+    "äsdfsfd",
+    cookie_expiry_days=1
+)
+
+name, authentication_status, username = authenticator.login("Login" , "main")
+
+if authentication_status == False:
+    st.error("Username / Password is incorrect")
+
+if authentication_status == None:
+    st.error("Please enter your Username and Password")
+
+if authentication_status == True:
+    #Embed PBI Code
+    st.components.v1.iframe(
+        "https://app.powerbi.com/view?r=eyJrIjoiNjM3ODcwOTAtOWU0Yy00NjI3LWEzZDctNjcxYzE4ZDY2NjU3IiwidCI6ImQxNTY2ZDQ0LTEyYjYtNDAyNy1iZDA0LWQyOTJmZWE3OWM5ZSJ9", 
         height=800, 
 
-    scrolling=True)
+        scrolling=True)
