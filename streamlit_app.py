@@ -1,16 +1,21 @@
 import streamlit as st
 from openai import OpenAI
 
-st.set_page_config(page_title="Dashboard 1", 
+st.set_page_config(page_title="Dashboard 2", 
                    page_icon=None, 
                    layout="wide", 
                    initial_sidebar_state="collapsed", 
-                   menu_items=None)
+                   menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    })
 hide_st_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
+            .styles_stateContainer__CelYF.parent {visibility: hidden;}
             .styles_stateContainer__CelYF {visibility: hidden;}
             .viewerBadge_text__fzr3E {visibility: hidden;}
             .viewerBadge_link__qRIco {visibility: hidden;}
