@@ -14,9 +14,9 @@ hide_st_style = """
             
             .block-container
                 {
-                    padding-top: 1rem;
+                    padding-top: 0;
                     padding-bottom: 0rem;
-                    margin-top: 1rem;
+                    margin-top: 0rem;
                 }
             </style>
             """
