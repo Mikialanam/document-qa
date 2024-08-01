@@ -42,6 +42,6 @@ st.title("📄 Yee haw Update 5")
 
 st.components.v1.iframe(
     "https://app.powerbi.com/view?r=eyJrIjoiNjM3ODcwOTAtOWU0Yy00NjI3LWEzZDctNjcxYzE4ZDY2NjU3IiwidCI6ImQxNTY2ZDQ0LTEyYjYtNDAyNy1iZDA0LWQyOTJmZWE3OWM5ZSJ9", 
-   # height=900, 
+     height=800, 
   #  width = '90%',
     scrolling=True)
