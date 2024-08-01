@@ -27,6 +27,12 @@ hide_st_style = """
             {
                     height: 3rem !important;
                 }
+
+            iframe 
+                {
+                aspect-ratio: 4 / 3;
+                width: 100%;
+                }
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
